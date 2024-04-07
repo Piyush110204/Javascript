@@ -1,0 +1,20 @@
+<script>
+    var num1=parseInt(prompt("Enter Your NUmber1"));
+var num2=parseInt(prompt("Enter Your NUmber2"));
+document.write("ArmStrong Number Between"+num1+"and"+num2);
+for(var i=num1;i<=num2;i++){
+    var numberOfDigits=i.toString().length;
+    var sum=0;
+    var temp=i;
+    while(temp>0){
+        var rem=temp%10;
+        sum+= rem * rem * rem;
+        temp = parseInt(temp/10);
+
+    }
+    if(sum==i){
+        document.write("<br>"+i);
+
+    }
+}
+</script>

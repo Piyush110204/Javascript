@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid red;
+            float: left;
+            margin-left: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+       function colorechange() {
+            var selectedColor = document.querySelector('.color1:checked');
+            var originalColor = selectedColor ? selectedColor.value : 'white';
+
+            var boxes = document.querySelectorAll('.box:checked');
+            for (var i = 0; i < boxes.length; i++) {
+                var box = boxes[i];
+                var circleId = box.value;
+                document.getElementById(circleId).style.backgroundColor = originalColor;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="circle" id="c1">
+        <span>1</span>
+    </div>
+    <div class="circle" id="c2">
+        2
+    </div>
+    <div class="circle" id="c3">
+        3
+    </div>
+    <div class="circle" id="c4">
+        4
+    </div>
+    <div class="circle" style="margin-right: 20px;"  id="c5">
+        5
+    </div>
+    <div class="circle" style="float: none;" id="c6">
+        6
+    </div>
+<div style="display: flex;margin-top: 100px;">
+    
+    <div style="width: 50%;float: left;">
+        <input type="radio" onchange="colorechange()" id="orange" value="orange"  name="col" class="color1">
+        <label for="orange">Orange</label>
+        <br>
+        <input type="radio" onchange="colorechange()" id="pink" value="pink" name="col"  class="color1">
+        <label for="pink">pink</label>
+        <br>
+        <input type="radio" onchange="colorechange()" id="blue" value="blue" name="col" class="color1">
+        <label for="blue">Blue</label>
+        <br>
+        <input type="radio" onchange="colorechange()" id="violet" value="violet" name="col" class="color1">
+        <label for="violet">Violet</label>
+        <br>
+    </div>
+    <div style="width: 45%;">
+        <input type="radio" value="c1" onchange="colorechange()" name="box" class="box" >
+        <label for="html">1</label>
+        <br>
+        <input type="radio" value="c2" onchange="colorechange()" name="box" class="box">
+        <label for="css">2</label>
+        <br>
+        <input type="radio" value="c3" onchange="colorechange()" name="box" class="box">
+        <label for="css">3</label>
+        <br>
+        <input type="radio" value="c4" onchange="colorechange()" name="box" class="box">
+        <label for="css">4</label>
+        <br>
+        <input type="radio" value="c5" onchange="colorechange()" name="box" class="box">
+        <label for="css">5</label>
+        <br>
+        <input type="radio" value="c6" onchange="colorechange()" name="box" class="box">
+        <label for="css">6</label>
+        <br>
+    </div>
+
+</div>
+
+</body>
+
+</html>

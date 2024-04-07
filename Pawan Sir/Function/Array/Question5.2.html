@@ -1,0 +1,15 @@
+<script>
+    function numberCount(arr, n) {
+        var count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == n) {
+                count++;
+            }
+        }
+        return count;
+    }
+    var arr = [6, 7, 8, 56, 67, 3, 6, 8, 5, 7, 6];
+    document.write(arr);
+    var n = 6;
+    document.write(`<br>Total accurance of ${n} is ${numberCount(arr, n)}`);
+</script>

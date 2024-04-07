@@ -1,0 +1,15 @@
+<script>
+    let n = parseInt(prompt("Enter any number :"));
+    
+    var i,a=-1,b=1,c;
+    function fibbo(n){
+        for(i=1;i<=n;i++)
+    {
+        c=a+b;
+        document.write("   "+c);
+        a=b;
+        b=c;
+    }
+    }
+    fibbo(n);
+</script>

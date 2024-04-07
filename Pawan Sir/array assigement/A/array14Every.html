@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ages=[19,34,23,22,33];
+        var b=ages.every(checkAdult);
+        document.write(b+"<br><br>");
+        document.write(ages+"<br><br>");
+        ages.splice(1,1,2);
+        b=ages.every(checkAdult);
+        document.write(b+"<br><br>");
+        document.write(ages+"<br><br>");
+        function checkAdult(age){
+            return age>=18;
+        }
+    </script>
+</body>
+</html>

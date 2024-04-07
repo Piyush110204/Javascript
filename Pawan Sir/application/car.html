@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Move Straight</title>
+  <style>
+    @keyframes moveCar {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    #main {
+        top:40px;
+      position: relative;
+      width: 100%;
+    }
+
+    img {
+        rotate: 180deg;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100px;
+      width: 100px;
+      animation: moveCar 4s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <img src="image/car.png" alt="">
+  </div>
+</body>
+</html>

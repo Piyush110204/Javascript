@@ -1,0 +1,20 @@
+<script>
+    function checkDivisibility(num1, num2, callback) {
+        if (num2 === 0) {
+            callback("Cannot divide by 0");
+        } else if (num1 % num2 === 0) {
+            callback(num1 + " is divisible by " + num2);
+        } else {
+            callback(num1 + " is not divisible by " + num2);
+        }
+    }
+
+    function displayResult(result) {
+        document.write(result);
+    }
+
+    let a = prompt("Enter first number") * 1;
+    let b = prompt("Enter second number") * 1;
+
+    checkDivisibility(a, b, displayResult);
+</script>

@@ -1,0 +1,19 @@
+<script>
+   function armstrom(a,callback){
+    let sum=0;
+document.write("<h1>"+a+"</h1>");
+   
+        while(a>0){
+            let rem=a%10;
+            sum=sum*10+rem;;
+            a=parseInt(a/10);
+        }
+        callback(sum)
+   }
+   let a=prompt("Enter Number")*1;
+   armstrom(a,(sum)=>{
+   document.write("<br><h1><font color='green'>Number Revers   :"+sum+"</font></h1>");
+   });
+
+
+</script>

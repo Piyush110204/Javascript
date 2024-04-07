@@ -1,0 +1,21 @@
+<!-- 
+      A
+     A B
+    A B C
+   A B C D
+  A B C D E
+
+ -->
+
+<script>
+    for(var i=65;i<=69;i++){
+    for(var sp=69;sp>=i;sp--){
+    document.write("&nbsp");
+        }
+        for(var j=65;j<=i;j++){
+            document.write(String.fromCharCode(j));
+        }
+        document.write("<br>");
+    }
+</script>
+

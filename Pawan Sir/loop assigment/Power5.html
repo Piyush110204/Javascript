@@ -1,0 +1,23 @@
+<script>
+    var x = parseInt(prompt("Enter number X"));
+    var y = parseInt(prompt("Enter Power y"));
+    var i=1,a=1,sum=0;
+    while(i<=y){
+        a=(a*x)/i;
+      if(i%2==0){
+        document.write(x+"^"+i+"/"+i);
+        sum=sum-a;
+        if(i<y)
+        document.write(" - ");
+      }
+      else{
+        document.write(x+"^"+i+"/"+i);
+        sum=sum+a;
+        if(i<y)
+        document.write(" + ");
+      }
+      i++;
+
+    }
+    document.write(" =  X series sum : "+sum);
+</script>

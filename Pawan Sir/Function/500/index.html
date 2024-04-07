@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validation() {
+            var a=nameValidate();
+            var b=passwordValidate();
+            var c=emailvalidate();
+            var d=classYearValidate();
+            var e=mobileValidate();
+            return (a&&b&&c&&d&&e);
+        }
+        function nameValidate() {
+            let name = document.getElementById("name");
+            let nameMessage = document.getElementById("namem");
+            let a = /^[a-zA-Z\s]+$/;
+            console.log(name.value);
+            if (name.value === "") {
+                nameMessage.innerHTML = "Enter your name";
+                name.focus();
+                return false;
+            }
+            else if (!a.test(name.value)) {
+                nameMessage.innerHTML = "Enter valid name";
+                name.focus();
+                return false;
+            }
+            else {
+                nameMessage.innerHTML = "";
+                return true;
+            }
+        }
+        function emailvalidate() {
+            let email = document.getElementById("email");
+            let emailMessage = document.getElementById("emailm");
+            let a = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            console.log(email.value);
+            if (email.value === "") {
+                emailMessage.innerHTML = "Enter your email";
+                email.focus();
+                return false;
+            }
+            else if (!a.test(email.value)) {
+                emailMessage.innerHTML = "Enter valid email";
+                email.focus();
+                return false;
+            }
+            else {
+                emailMessage.innerHTML = "";
+                return true;
+            }
+        }
+        function passwordValidate() {
+            let password = document.getElementById("password");
+            let passwordMessage = document.getElementById("passwordm");
+            let a = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            console.log(password.value);
+            if (password.value === "") {
+                passwordMessage.innerHTML = "Enter your password";
+                password.focus();
+                return false;
+            }
+            else if (!a.test(password.value)) {
+                passwordMessage.innerHTML = "password Have at one small letter ,capital letter ,number, special symbol and atleast 8 characters";
+                password.focus();
+                return false;
+            }
+            else {
+                passwordMessage.innerHTML = "";
+                return true;
+            }
+        }
+        function classYearValidate() {
+            let classYear = document.getElementById("classyear");
+            let classYearMessage = document.getElementById("classyearm");
+            if (classYear.value === "none") {
+                classYearMessage.innerHTML = "Select at least one year";
+                classYear.focus();
+                return false;
+            }
+            else {
+                classYearMessage.innerHTML = "";
+                return true;
+            }
+        }
+        function mobileValidate() {
+            var mobile = document.getElementById("mobile");
+            var mobileMessage = document.getElementById("mobilem");
+
+            if (mobile.value === "") {
+                mobileMessage.innerHTML = "Enter your mobile number";
+                mobile.focus();
+                return false;
+            } else if (isNaN(mobile.value * 1)) {
+                mobileMessage.innerHTML = "Enter valid mobile number only number";
+                mobile.focus();
+                return false;
+            } else if (mobile.value.length !== 10) {
+                mobileMessage.innerHTML = "Mobile number must be 10 digits long";
+                mobile.focus();
+                return false;
+            } else {
+                mobileMessage.innerHTML = "";
+                return true;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <form onsubmit="return validation()" action="#">
+            <label>Name : </label>
+            <input type="text" id="name" onkeyup="nameValidate()" name="name">
+            <span id="namem" style="color: red;"></span><br><br>
+            <label>Email : </label>
+            <input type="email" id="email" onkeyup="emailvalidate()" name="email">
+            <span id="emailm" style="color: red;"></span><br><br>
+            <label>Password:</label>
+            <input type="password" id="password" onkeyup="passwordValidate()" name="password">
+            <span id="passwordm" style="color: red;"></span><br><br>
+            <select name="classyear" onkeyup="classYearValidate()" id="classyear">
+                <option value="none">Select Year</option>
+                <option value="bca1">BCA 1st Year</option>
+                <option value="bca2">BCA 2nd Year</option>
+                <option value="bca3">BCA 3rd Year</option>
+            </select>
+            <span id="      " style="color: red;"></span><br><br>
+            <label>Mobile : </label>
+            <input type="text" id="mobile" onkeyup="mobileValidate()" name="mobile">
+            <span id="mobilem" style="color: red;"></span><br><br>
+            <label>Gender : </label>
+            <label style="font-size: 12px;">Male</label><input checked type="radio" name="gender" id="male">
+            <label style="font-size: 12px;">FeMale</label><input type="radio" name="gender" id="female">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+</html>

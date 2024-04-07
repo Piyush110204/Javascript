@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <audio src="QGXJEXN-transportation-car-car-start-04.mp3"></audio>
+        <button id="start">Start</button>
+        
+</body>
+    <script>
+        let sound = document.querySelector('audio');
+        let startCar = document.querySelector('#start');
+        startCar.addEventListener('click', play);
+
+        function play(){
+            if(startCar.innerHTML == "Start"){
+                sound.play();
+                startCar.innerHTML = "Stop";
+            }
+            else{
+                sound.pause();
+                startCar.innerHTML = "Start";
+            }
+            
+        }
+    </script>
+</html>

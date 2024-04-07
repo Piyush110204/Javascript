@@ -1,0 +1,15 @@
+<script>
+   //bubble sort
+   var arr = [9, 76, 54, 34, 65];
+    document.write("<br>"+arr)
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j <arr.length; j++){
+            if(arr[i] < arr[j]){
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    document.write("<br>" + arr);
+</script>

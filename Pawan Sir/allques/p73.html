@@ -1,0 +1,36 @@
+<!-- 
+    #
+   *#* 
+  **#** 
+ ***#*** 
+****#****
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        var i,j,sp;
+        for(i=1;i<=5;i++){
+           for(sp=5-i;sp>=1;sp--){
+            document.write("&nbsp;");
+           }
+           for(j=1;j<=i;j++){
+             if(i%2!=0)
+             document.write("*");
+        else if(j==4){
+           document.write("#");
+        }
+        
+        }
+        document.write("<br>");
+         
+    }
+    </script>
+ </body>
+ </html>

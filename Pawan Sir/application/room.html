@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div style="float: left;"><img src="image/room.avif" id="room" alt=""></div>
+    <div style="margin: auto;display: flex;justify-content: space-around;">
+        <button onclick="lightSwitch(this)">Off</button>
+        <button onclick="lamp(this)">Lamp off</button>
+    </div>
+    <script>
+        var currentBrightness = 100;
+
+        function lightSwitch(element){
+            var room=document.getElementById('room');
+            if(element.innerHTML=='Off'){
+                room.setAttribute('style','filter: brightness(20%);')
+                currentBrightness = 20;
+                element.innerHTML = 'On';
+            } else {
+                room.setAttribute('style','');
+                currentBrightness = 100;
+                element.innerHTML = 'Off';
+            }
+        }
+
+        function lamp(element){
+            var room=document.getElementById('room');
+            if(element.innerHTML=='Lamp off'){
+                var newBrightness = currentBrightness - 20; 
+                if(newBrightness > 100) newBrightness = 100;
+                room.setAttribute('style','filter: brightness(' + newBrightness + '%);');
+                currentBrightness = newBrightness;
+                element.innerHTML="Lamp on";
+            }
+            else{
+                var newBrightness = currentBrightness + 20;
+                if(newBrightness < 20) newBrightness = 20; 
+                room.setAttribute('style','filter: brightness(' + newBrightness + '%);');
+                currentBrightness = newBrightness;
+                element.innerHTML="Lamp off";
+            }
+        }
+    </script>
+</body>
+</html>

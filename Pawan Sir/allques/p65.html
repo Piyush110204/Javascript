@@ -1,0 +1,27 @@
+<!-- 
+    X 
+   X X 
+  X__X
+ X____X
+X X X X X
+
+ -->
+ <script>
+    for(var i=1;i<=5;i++){
+        for(var sp=5-i;sp>=1;sp--){
+          document.write("&nbsp;");
+        }
+        for(var j=1;j<=i;j++){
+            if(i==j||j==1||i==5){
+                document.write("x");
+    
+            }
+            else{
+                document.write("_");
+    
+            }
+        }
+        document.write("<br>");
+
+    }
+ </script>

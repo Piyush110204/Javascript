@@ -1,0 +1,35 @@
+<script>
+    var n=parseInt(prompt("Enter any number"));
+    let  i, j, k;
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n; j++) {
+            if(j==n){
+                document.write("<span>*</span>");
+            }
+            else if(j+i==(n+1)){
+                document.write("<span>*</span>");
+            }
+            else if(i==n){
+                document.write("<span>*</span>");
+            }
+            else{
+                document.write("<span>&nbsp;&nbsp</span>");
+            }
+        }
+        for (j = 1; j <= i; j++) {
+            if(i==n){
+                document.write("<span>*</span>");
+            }
+            else if(j==1){
+                document.write("<span>*</span>");
+            }
+            else if(i==j){
+                document.write("<span>*</span>");
+            }
+            else{
+                document.write("<span>&nbsp;&nbsp</span>");
+            }
+        }
+        document.write("<br>");
+    }
+</script>

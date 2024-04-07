@@ -1,0 +1,21 @@
+<script>
+    var num1 = parseInt(prompt("Enter the starting number"));
+    var num2 = parseInt(prompt("Enter the ending number"));
+
+    document.write("Perfect numbers between " + num1 + " and " + num2 + ":<br>");
+
+    for (var num = num1; num <= num2; num++) {
+        var sum = 0;
+        for (var i = 1; i < num; i++) {
+            if (num % i === 0) {
+                sum += i;
+            }
+        }
+        if (sum === num) {
+            document.write(num + "<br>");
+        }
+    }
+</script>
+
+
+<!-- Two number ke bich me Perfect number -->

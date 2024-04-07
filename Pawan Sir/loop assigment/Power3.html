@@ -1,0 +1,31 @@
+<script>
+let n = parseInt(prompt("Enter Your number"));
+let i = 1;
+let pro = 1.0;
+let sum = 0.0;
+let a = 1.0;
+
+while (i <= n) {
+    if (i % 2 === 0) {
+        if (i < n) {
+          document.write(i + "!/" + (i + 1) + " - ");
+        }
+        pro *= i;
+        a = pro / (i + 1);
+        sum += a;
+    } else {
+        if (i === 1) {
+            document.write("-");
+        }
+        if (i < n) {
+            document.write(i + "!/" + (i + 1) + " + ");
+        }
+        pro *= i;
+        a = pro / (i + 1);
+        sum -= a;
+    }
+    i++;
+}
+    document.write(n + "!/" + i + " = " + sum);
+
+</script>

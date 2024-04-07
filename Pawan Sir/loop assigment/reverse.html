@@ -1,0 +1,11 @@
+<script>
+    var n=prompt("Enter Any Number : ");
+    parseInt(n);
+    var rev=0;
+    while(n){
+        let rem=n%10;
+        rev=rev*10+rem;
+        n=parseInt(n/10);
+    }
+    document.write("Reverse : "+rev);
+</script>

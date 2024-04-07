@@ -1,0 +1,15 @@
+<script>
+    var age = parseInt(prompt("Enter your age: "));
+
+    if (isNaN(age) || age < 0) {
+        document.write("Invalid age! Please enter a valid age.");
+    } else if (age <= 12) {
+        document.write("You are a child.");
+    } else if (age <= 19) {
+        document.write("You are a teenager.");
+    } else if (age <= 35) {
+        document.write("You are young.");
+    } else {
+        document.write("You are old.");
+    }
+</script>

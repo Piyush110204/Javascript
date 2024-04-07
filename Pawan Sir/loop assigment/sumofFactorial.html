@@ -1,0 +1,13 @@
+<script>
+    var n=prompt("Enter any number : ");
+    parseInt(n); 
+    var sum=0;
+    for(let i=0;i<=n;i++){
+        let fact=1;
+        for(let j=1;j<=i;j++){
+            fact=fact*j;
+        }
+        sum=sum+fact;
+    }
+    document.write("Sum of n factorial : "+sum);
+</script>

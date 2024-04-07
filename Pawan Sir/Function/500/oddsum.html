@@ -1,0 +1,16 @@
+<script>
+    function sum(number) {
+        var sum = 0;
+        document.write("Odd Number Sum<br>");
+        for (let i = 1; i <= number; i += 2) {
+            document.write(i + "<br>");
+            sum += i;
+        }
+       return sum;
+    }
+
+    var n = prompt("Enter any number : ");
+    n = parseInt(n);
+   var s= sum(n);
+   document.write("Sum : " +s);
+</script>

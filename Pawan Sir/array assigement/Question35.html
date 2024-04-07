@@ -1,0 +1,19 @@
+<script>
+    //Linear searching
+    var arr = [9, 76, 54, 34, 65];
+    document.write("<br>"+arr)
+    let index = -1;
+    let find=54;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i]==find){
+            index=i;
+            break;
+        }
+    }
+    if(index==-1){
+        document.write("<br>Element not found");
+    }
+    else{
+        document.write("<br>Element found at index "+index);
+    }
+</script>

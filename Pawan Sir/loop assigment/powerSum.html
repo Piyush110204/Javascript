@@ -1,0 +1,17 @@
+<script>
+    var n = prompt("Enter any number : ");
+    var p = prompt("Enter Power : ");
+    parseInt(n);
+    var sum=0;
+    let i=1;
+    for (i = 1; i <= p; i++) {
+        let result=1;
+        for (let j = 1; j <= i; j++) {
+            result = result * n;
+        }
+        i!=p && document.write(`${n}<sup>${i}</sup> + `);
+        sum=sum+result;
+    }
+    document.write(`${n}<sup>${i-1}</sup> =${sum} `);
+
+</script>

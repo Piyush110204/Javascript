@@ -1,0 +1,32 @@
+<script>
+    var n = parseInt(prompt("Enter Any Number:"));
+    for (let i = 1, a = 1; a <= n; i++) {
+        let count = 0;
+        let m = i;
+        let sum = 0;
+        while (m > 0) {
+            let rem = m % 10;
+            count++;
+            m = parseInt(m / 10);
+        }
+
+        m = i;
+
+        while (m > 0) {
+            let rem = m % 10;
+            let mul = 1;
+
+            for (let j = 1; j <= count; j++) {
+                mul *= rem;
+            }
+
+            sum += mul;
+            m = parseInt(m / 10);
+        }
+
+        if (sum === i) {
+            a++;
+            document.write(i + "<br>");
+        }
+    }
+</script>

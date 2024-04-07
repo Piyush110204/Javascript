@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("50"+null+"<br>");     //50null
+        
+        document.write("50"+undefined+"<br>");  //50undefined
+        document.write(50+null+"<br>");     //50
+        document.write(50+undefined+"<br>");  //nan
+        document.write(50+true+"<br>");
+        document.write(50*false+"<br>");
+        document.write(null==undefined) //true
+    </script>
+</body>
+</html>

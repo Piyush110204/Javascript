@@ -1,0 +1,27 @@
+<script>
+    var num = parseInt(prompt("Enter Your Number"));
+    var real= num;
+    var sum = 0;
+
+    while (num > 0) {
+        var digit = num % 10;
+        var factorial = 1;
+
+        
+        for (var i = 1; i <= digit; i++) {
+            factorial *= i;
+        }
+
+        sum =sum+ factorial;
+        num = parseInt(num / 10);
+    }
+
+    if (sum == real) {
+        document.write("This number is a Strong Number");
+    } else {
+        document.write("This number is Not a Strong Number");
+    }
+</script>
+
+
+<!-- Strong number  -->

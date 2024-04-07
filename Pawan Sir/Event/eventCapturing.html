@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>Click</button>
+    </div>
+</body>
+<script>
+    var button=document.querySelector('button');
+    var div=document.querySelector('div');
+
+    button.addEventListener('click',()=>{
+        alert("button");
+    },true);
+
+    div.addEventListener('click',()=>{
+        alert("div");
+    },true);
+</script>
+</html>

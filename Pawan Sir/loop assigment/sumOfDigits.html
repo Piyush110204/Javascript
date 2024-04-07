@@ -1,0 +1,12 @@
+<script>
+    var n = prompt("Enter first number: ");
+    n = parseInt(n);
+    m=n;
+    var sum=0;
+    while(n>0){
+        let rem=n%10;
+        sum=sum+rem;
+        n=parseInt(n/10);
+    }
+    document.write(`Number : ${m} <br>sum of digits ${sum}`);
+</script>

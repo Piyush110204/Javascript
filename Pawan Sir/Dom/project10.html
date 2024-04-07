@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin-top: 50px;
+        }
+
+        #display {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #resume, #stop {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="display">00:00:00:000</div>
+<button id="startStop" onclick="startStop()">Start</button>
+<button id="resume" onclick="resume()">Resume</button>
+<button id="stop" onclick="stop()">Stop</button>
+<button onclick="reset()">Reset</button>
+
+<script>
+    let timer;
+    let isRunning = false;
+    let milliseconds = 0, seconds = 0, minutes = 0, hours = 0;
+
+    function startStop() {
+        if (isRunning) {
+            clearInterval(timer);
+            document.getElementById('startStop').innerText = 'Start';
+            document.getElementById('resume').style.display = 'inline-block';
+            document.getElementById('stop').style.display = 'none';
+        } else {
+            timer = setInterval(updateDisplay, 10);
+            document.getElementById('startStop').innerText = 'Pause';
+            document.getElementById('resume').style.display = 'none';
+            document.getElementById('stop').style.display = 'inline-block';
+        }
+        isRunning = !isRunning;
+    }
+
+    function resume() {
+        timer = setInterval(updateDisplay, 10);
+        document.getElementById('startStop').innerText = 'Pause';
+        document.getElementById('resume').style.display = 'none';
+        document.getElementById('stop').style.display = 'inline-block';
+        isRunning = true;
+    }
+
+    function stop() {
+        clearInterval(timer);
+        document.getElementById('startStop').innerText = 'Resume';
+        document.getElementById('resume').style.display = 'inline-block';
+        document.getElementById('stop').style.display = 'none';
+        isRunning = false;
+    }
+
+    function reset() {
+        clearInterval(timer);
+        isRunning = false;
+        milliseconds = 0;
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+        document.getElementById('startStop').innerText = 'Start';
+        document.getElementById('resume').style.display = 'none';
+        document.getElementById('stop').style.display = 'none';
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        milliseconds += 10;
+        if (milliseconds === 1000) {
+            milliseconds = 0;
+            seconds++;
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes === 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+        }
+
+        const formattedTime =
+            padNumber(hours) + ':' +
+            padNumber(minutes) + ':' +
+            padNumber(seconds) + ':' +
+            padNumber(milliseconds);
+
+        document.getElementById('display').innerText = formattedTime;
+    }
+
+    function padNumber(num) {
+        return num < 10 ? '0' + num : num;
+    }
+</script>
+
+</body>
+</html>

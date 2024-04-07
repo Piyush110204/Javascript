@@ -1,0 +1,15 @@
+<script>
+    var n = parseInt(prompt("Enter Any Number"));
+    for (let i = 0; i < n; i++) {
+        for (let j = 1; j <= n - i; j++) {
+            document.write("&nbsp;&nbsp;")
+        }
+        let x = 1;
+        for (let j = 0; j <= i; j++)
+        {
+            document.write(x + "&nbsp;&nbsp;");
+            x = x * (i - j) / (j + 1);
+        }
+        document.write("<br>");
+    }
+</script>

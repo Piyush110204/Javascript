@@ -1,0 +1,13 @@
+<script>
+    var n = prompt("Enter any number : ");
+    parseInt(n);
+    var sum=0;
+    document.write("Odd Number Sum<br>");
+    for (let i = 2; i <= n; i++) {
+        if (i % 2 != 0) {
+            document.write(i + "<br>");
+            sum=sum+i;
+        }
+    }
+    document.write("Sum : "+sum);
+</script>

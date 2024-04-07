@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex;justify-content: center;align-items: center;cursor: pointer;" onclick="bulbSwitch()">
+        <div id="main" style="width: 350px;height: 350px;border-radius: 50%;display: flex;justify-content: center;align-items: center;background-color: white;border : 1px solid black">
+            <img src="image/bulb_prev_ui.png" style="height: 80px;width: 80px;cursor: pointer;" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    function bulbSwitch(){
+        var main = document.getElementById('main');
+        var img=document.querySelector('img');
+        if(main.style.backgroundColor=='white'){
+            main.style.backgroundColor='orange';
+        }
+        else{
+            main.style.backgroundColor='white';
+        }
+    }
+</script>
+
+</html>

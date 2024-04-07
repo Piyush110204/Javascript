@@ -1,0 +1,31 @@
+<script>
+    var p = parseFloat(prompt("Enter Physics marks: "));
+    var c = parseFloat(prompt("Enter Chemistry marks: "));
+    var e = parseFloat(prompt("Enter English marks: "));
+    var m = parseFloat(prompt("Enter Mathematics marks: "));
+    var h = parseFloat(prompt("Enter Hindi marks: "));
+
+    var tm = p + c + e + m + h; 
+
+    var per = (tm / 500) * 100; 
+
+    let grade;
+
+    if (per >= 90) {
+        grade = "Grade A";
+    } else if (per >= 80) {
+        grade = "Grade B";
+    } else if (per >= 70) {
+        grade = "Grade C";
+    } else if (per >= 60) {
+        grade = "Grade D";
+    } else if (per >= 40) {
+        grade = "Grade E";
+    } else {
+        grade = "Grade F";
+    }
+
+    document.write(`Total Marks: ${tm}<br>`);
+    document.write(`Percentage: ${per.toFixed(2)}%<br>`);
+    document.write(`Grade: ${grade}`);
+</script>

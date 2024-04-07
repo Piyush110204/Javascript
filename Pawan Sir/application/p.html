@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    #main {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      animation: moveSquare 0.001s infinite;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 100px;
+      animation: moveCar 8s infinite;
+    }
+    @keyframes moveCar {
+      0% {
+        top: 0;
+        left: 0;
+      }
+      25% {
+        top: 0;
+        left: 300px;
+      }
+      50% {
+        top: 300px;
+        left: 300px;
+      }
+      75% {
+        top: 300px;
+        left: 0;
+      }
+      100% {
+        top: 0;
+        left: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+    <div id="main"><img src="image/car.png" alt=""></div>
+</body>
+</html>

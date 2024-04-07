@@ -1,0 +1,14 @@
+<script>
+    var n = parseInt(prompt("Enter any number :"));
+    let a=n;
+    for (i = 1; i <= n; i++,a--) {
+        for (let j = 1; j <= n; j++) {
+            if (j == 1 || j == n || i == n || i == 1) {
+                document.write(a);
+            } else {
+                document.write("&nbsp;&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
+</script>

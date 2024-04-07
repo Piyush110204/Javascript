@@ -1,0 +1,18 @@
+<script>
+    const char = prompt("Enter any character: ").toLowerCase();
+    let a;
+
+    switch (char) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            a = "Vowel";
+            break;
+        default:
+            a = "Consonant";
+    }
+
+    document.write(`The character is a ${a}`);
+</script>

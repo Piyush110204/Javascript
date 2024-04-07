@@ -1,0 +1,14 @@
+<script>
+    var arr = [1, 2, 3, 7, 5];
+    document.write(arr);
+    for (let i = 0; i < arr.length; i++) {
+        let sum = arr[i];
+        for (let j = i + 1; j < arr.length; j++) {
+            sum = sum + arr[j];
+            if (sum == 12) {
+                document.write("<br>" + (i + 1) + "       " + (j + 1));
+                break;
+            }
+        }
+    }
+</script>

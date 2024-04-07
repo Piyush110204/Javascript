@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pp {
+            float: left;
+            width: 30%;
+            height: auto;
+            margin: 1%;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function add2() {
+            var s = document.getElementById("s2").value;
+            var ss = document.getElementById("demo2");
+            ss.style.backgroundColor = s;
+        }
+        function add3() {
+            var s = document.getElementById("s3").value;
+            var ss = document.getElementById("demo3");
+            ss.style.backgroundColor = s;
+        }
+        function add4() {
+            var s = document.getElementById("s4").value;
+            var ss = document.getElementById("demo4");
+            ss.style.backgroundColor = s;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="pp">
+        <div style="width: 100% ;height: 40vh;border: 1px solid black;" id="demo2">
+        </div>
+        <select id="s2" onchange="add2()">
+            <option>Select</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="pink">pink</option>
+            <option value="Green">Green</option>
+        </select>
+    </div>
+    <div class="pp">
+        <div style="width: 100% ;height: 40vh;border: 1px solid black;" id="demo3">
+        </div>
+        <select id="s3" onchange="add3()">
+            <option>Select</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="pink">pink</option>
+            <option value="Green">Green</option>
+        </select>
+    </div>
+    <div class="pp">
+        <div style="width: 100% ;height: 40vh;border: 1px solid black;" id="demo4">
+        </div>
+        <select id="s4" onchange="add4()">
+            <option>Select</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="pink">pink</option>
+            <option value="Green">Green</option>
+        </select>
+    </div>
+
+
+
+
+</body>
+
+</html>

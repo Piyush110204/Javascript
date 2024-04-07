@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Selection with Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin-top: 50px;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button.selected {
+            background-color: lightgreen;
+        }
+
+        #cartCount {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cartCount">*</div>
+    <i style="font-size: 80px;" class="fas fa-shopping-cart"></i><br><br>
+<button onclick="toggleProduct('product1')" id="product1">Select Product 1</button><br>
+<button onclick="toggleProduct('product2')" id="product2">Select Product 2</button><br>
+<button onclick="toggleProduct('product3')" id="product3">Select Product 3</button><br>
+<button onclick="toggleProduct('product4')" id="product4">Select Product 4</button><br>
+
+
+
+<script>
+    let selectedProducts = {};
+
+    function toggleProduct(product) {
+        const productButton = document.getElementById(product);
+
+        if (selectedProducts[product]) {
+            delete selectedProducts[product];
+        } else {
+            selectedProducts[product] = true;
+        }
+
+        updateCartCount();
+        updateButtonStyle(productButton);
+    }
+
+    function updateCartCount() {
+        const cartCount = Object.keys(selectedProducts).length;
+        document.getElementById('cartCount').innerText = cartCount;
+        if(cartCount==0){
+            document.getElementById('cartCount').innerText = "*";
+        }
+    }
+
+    function updateButtonStyle(button) {
+        if (selectedProducts[button.id]) {
+            button.classList.add('selected');
+        } else {
+            button.classList.remove('selected');
+        }
+    }
+</script>
+
+</body>
+</html>

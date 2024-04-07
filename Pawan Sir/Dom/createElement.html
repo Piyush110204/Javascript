@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Javascript</h2>
+    <button onclick="createElement1()">Create Element</button>
+    <button onclick="removeElement();">Remove Element</button>
+    <button onclick="setAttributeClassRed();">change Color</button>
+</body>
+<script>
+    function createElement1() {
+        var newElement = document.createElement("p");
+        newElement.innerHTML = "javascript is client side as well as server side scripting language."
+        newElement.className = 'hello';
+        document.body.appendChild(newElement);
+    }
+    function removeElement() {
+        var element = document.getElementsByClassName('hello');
+        element[0].remove();
+    }
+    function setAttributeClassRed(){
+        var element = document.getElementsByClassName('hello');
+        console.log(!element[0].classList.contains('red'));
+        if(!element[0].classList.contains('red')){
+            element[0].setAttribute("class",'red')
+        }
+    }
+</script>
+
+</html>

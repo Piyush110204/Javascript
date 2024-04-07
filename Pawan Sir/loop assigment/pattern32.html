@@ -1,0 +1,11 @@
+<script>
+    var n = parseInt(prompt("Enter any number :"));
+    for (let i = 1; i <= n; i++) {
+        let ch = 64 + i;
+        let line = '';
+        for (let j = 1; j <= i; j++) {
+            line += String.fromCharCode(ch);
+        }
+        console.log(line);
+    }
+</script>

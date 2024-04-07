@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function swap(id){
+            var img = document.getElementById(id).src;
+            var img1 = document.getElementById("main").src;
+            var third;
+            third = img;
+            img = img1;
+            img1 = third;
+            document.getElementById("main").src = img1;
+            document.getElementById(id).src = img;
+        }
+    </script>
+</head>
+<body>
+    <table align="center" cellpadding="5" border="1">
+        <tr>
+            <td colspan="3"><img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1440" alt="" id="main" width="450px"></td>
+        </tr>
+        <tr>
+            <td><img src="https://hips.hearstapps.com/hmg-prod/images/porsche-drive-experience-la-018-1638803943.jpg?crop=0.715xw:0.536xh;0.0417xw,0.296xh&resize=1200:*" alt="" onclick="swap('img1')" id="img1" width="150px"></td>
+            <td><img src="https://hips.hearstapps.com/hmg-prod/images/mac06601-2-1624895629.jpg?crop=0.713xw:0.534xh;0.0545xw,0.346xh&resize=1200:*" alt="" id="img2" onclick="swap('img2')" width="150px"></td>
+            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnWblUXEz6fvkxKrMs8BWtlNA5s_0JYTRVThfg6zs_cBTmgQD_A3tZQbti7QXveqV2WvA&usqp=CAU" alt="" id="img3" onclick="swap('img3')" width="150px"></td>
+        </tr>
+    </table>
+</body>
+</html>

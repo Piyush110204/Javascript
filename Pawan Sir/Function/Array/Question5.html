@@ -1,0 +1,33 @@
+<script>
+    function removeDuplicates(arr){
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    arr.splice(j, 1);
+                    j--;
+                }
+            }
+        }
+        return arr;
+    }
+    function sortArray(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+    k=2;
+    var arr = [6,7,8,56,67,3,6,7,7,7];
+    document.write(arr);
+    removeDuplicates(arr);
+    sortArray(arr);
+    document.write("<br>Min : " + arr[k-1]);
+    document.write("<br>Max : " + arr[arr.length-k]);
+    
+</script>

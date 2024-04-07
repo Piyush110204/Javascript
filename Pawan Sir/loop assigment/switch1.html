@@ -1,0 +1,20 @@
+<script>
+    var ch = parseInt(prompt("Enter 1 for circle or 2 for rectangle: "));
+    let area;
+
+    switch (ch) {
+        case 1:
+            const radius = parseFloat(prompt("Enter the radius of the circle: "));
+            area = 3.14 * radius * radius;
+            break;
+        case 2:
+            const length = parseFloat(prompt("Enter the length : "));
+            const width = parseFloat(prompt("Enter the width : "));
+            area = length * width;
+            break;
+        default:
+            area = "Invalid choice!";
+    }
+
+    document.write(`Area: ${area}`);
+</script>

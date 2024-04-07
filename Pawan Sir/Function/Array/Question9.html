@@ -1,0 +1,21 @@
+<script>
+    function unionCount(a, b) {
+        var c = [];
+        for (var i = 0; i < a.length; i++) {
+            if (!c.includes(a[i])) {
+                c.push(a[i]);
+            }
+        }
+        for (var i = 0; i < b.length; i++) {
+            if (!c.includes(b[i])) {
+                c.push(b[i]);
+            }
+        }
+        return c.length;
+    }
+    var a=[7,8,4,3,2,1];
+    var b=[7,8,4,3,0];
+    document.write("<br>A : " + a);
+    document.write("<br>B : " + b);
+    document.write("<br>Count : " + unionCount(a,b));
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        input{
+            height: 30px;
+            width: 100%;
+            margin-bottom: 9px;
+        }
+        div{
+            background-color: black;
+            color: white;
+            font-size: large;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <input onkeyup="add()" type="text" id="first"><br><br>
+    <input onkeyup="add()" type="text" id="second"><br><br>
+    <input onkeyup="add()" type="text" id="third"><br><br>
+    <center>
+        <div id="black-board">Result : <span id="ans"></span></div>
+    </center>
+    <script>
+        function add(){
+            var a=document.getElementById('first');
+            var b=document.getElementById('second');
+            var c=document.getElementById('third');
+            var ans=document.getElementById('ans');
+            ans.innerHTML=a.value*1 + b.value*1 + c.value*1; 
+        }
+    </script>
+</body>
+</html>

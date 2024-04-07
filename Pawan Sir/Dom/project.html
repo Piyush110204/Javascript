@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(){
+            var elements = document.getElementsByClassName("item");
+            var selected = [];
+          
+            for(var i = 0; i < elements.length; i++) {
+                if (elements[i].checked) {
+                    selected.push(elements[i].id);
+                }
+            }
+            
+            if (selected.length > 0) {
+                alert("Selected items: " + selected.join(', '));
+            } else {
+                alert("No items selected.");
+            }
+            
+            
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form action="" onsubmit="abc()">
+        <input type="checkbox" name="coffee" id="coffee" class="item" >
+        <label for="coffee">coffee</label> <br>
+        <input type="checkbox" name="chocolate" id="chocolate" class="item">
+        <label for="chocolate">Chocolate</label><br>
+        <input type="checkbox" name="icecream" id="icecream" class="item">
+        <label for="icecream">icecream</label> <br>
+        <input type="checkbox" name="cookies" id="cookies" class="item">
+        <label for="cookies">cookies</label> <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

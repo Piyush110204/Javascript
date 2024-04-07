@@ -1,0 +1,20 @@
+<script>
+
+var num1=parseInt(prompt("Enter Your NUmber1"));
+var num2=parseInt(prompt("Enter Your NUmber2"));
+document.write("Prime Number Between"+num1+"and"+num2);
+for(var i=num1;i<=num2;i++){
+    var bet=0;
+    for( var j=2;j<i;j++){
+        if(i%j==0){
+            bet=1;
+            break;
+        }
+    }
+    if(i>1 && bet==0){
+        document.write("<br>" +i);
+    }
+}
+
+
+</script>

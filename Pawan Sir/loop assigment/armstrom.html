@@ -1,0 +1,33 @@
+<script>
+    var n = parseInt(prompt("Enter Any Number:"));
+    let count = 0;
+    let m = n;
+    let sum = 0;
+
+    while (m > 0) {
+        let rem = m % 10;
+        count++;
+        m = Math.floor(m / 10);
+    }
+
+    m = n;
+
+    while (m > 0) {
+        let rem = m % 10;
+        let mul = 1;
+
+        for (let i = 1; i <= count; i++) {
+            mul *= rem;
+        }
+
+        sum += mul;
+        m = parseInt(m / 10);
+    }
+
+    if (sum === n) {
+        document.write("Armstrong Number");
+    } else {
+        document.write("Not Armstrong Number");
+    }
+
+</script>

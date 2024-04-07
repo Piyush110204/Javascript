@@ -1,0 +1,25 @@
+<script>
+    function findMax(num1, num2, num3, callback) {
+        var max;
+
+        if (num1 >= num2 && num1 >= num3) {
+            max = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            max = num2;
+        } else {
+            max = num3;
+        }
+
+        callback(max);
+    }
+
+    function displayMax(num) {
+        document.write("The greatest number is: " + num);
+    }
+
+    var f = parseInt(prompt("Enter first number: "));
+    var s = parseInt(prompt("Enter second number: "));
+    var t = parseInt(prompt("Enter third number: "));
+
+    findMax(f, s, t, displayMax);
+</script>

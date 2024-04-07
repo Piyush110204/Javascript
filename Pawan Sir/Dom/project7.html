@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #image-container {
+            width: 300px;
+            overflow: hidden;
+        }
+
+        #zoom-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #zoom-controls {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div id="image-container">
+            <img id="zoom-image" src="https://store-images.s-microsoft.com/image/apps.60323.14581193029730121.3bde2745-c5bc-4659-9b31-32749bd5129f.66d40a75-671b-4612-aa8b-22aa289863e4?q=90&w=336&h=200" alt="">
+        </div>
+
+        <div id="zoom-controls">
+            <button onclick="zoomIn()">Zoom In</button>
+            <button onclick="zoomOut()">Zoom Out</button>
+        </div>
+
+        <script>
+            const zoomImage = document.getElementById('zoom-image');
+            let scale = 2;
+
+            function zoomIn() {
+                scale += 0.1;
+                zoomImage.style.transform = `scale(${scale})`;
+            }
+
+            function zoomOut() {
+                if (scale > 1) {
+                    scale -= 0.1;
+                    zoomImage.style.transform = `scale(${scale})`;
+                }
+            }
+        </script>
+    </body>
+
+</body>
+
+</html>

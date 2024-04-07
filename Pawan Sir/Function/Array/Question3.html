@@ -1,0 +1,13 @@
+<script>
+    function reverse(arr) {
+        for (let i = 0; i < arr.length / 2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length - (i + 1)];
+            arr[arr.length - (i + 1)] = temp;
+        }
+        return arr;
+    }
+    var arr = [6,7,8,56,67,3];
+    document.write(arr);
+    document.write("<br>" + reverse(arr));
+</script>

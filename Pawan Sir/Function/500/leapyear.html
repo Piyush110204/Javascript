@@ -1,0 +1,17 @@
+<script>
+    function check(year, callback) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            callback("Year " + year + " is a leap year");
+        } else {
+            callback("Year " + year + " is not a leap year");
+        }
+    }
+
+    function result(message) {
+        document.write(message);
+    }
+
+    var y = parseInt(prompt("Enter any Year :"));
+
+    check(y, result);
+</script>

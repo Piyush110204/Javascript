@@ -1,0 +1,38 @@
+<!-- 
+    ABCDE
+     A__D
+      A_C
+       AB
+        A
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        for(var i=69;i>=65;i--){
+
+            for(var sp=69;sp>=i;sp--){
+               document.write("&nbsp;&nbsp;");
+            }
+            for(var j=65;j<=i;j++){
+               if(i==j||i==69||j==65){
+                 document.write(String.fromCharCode(j));
+               }
+               else{
+                document.write("_");
+                  
+               }         
+            }
+            document.write("<br>");
+            
+        }
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,23 @@
+<script>
+    function checkPrime(number, callback) {
+        let count = 0;
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                count++;
+                callback(number + " is not a prime number");
+                return;
+            }
+        }
+        if (!count) {
+            callback(number + " is a prime number");
+        }
+    }
+
+    function displayResult(message) {
+        document.write(message);
+    }
+
+    var n = prompt("Enter any number : ");
+    n = parseInt(n);
+    checkPrime(n, displayResult);
+</script>

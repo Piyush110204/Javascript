@@ -1,0 +1,16 @@
+<script>
+    function check(age, callback) {
+        if (age >= 18) {
+            callback("Eligible for vote");
+        } else {
+            callback("Not Eligible for vote");
+        }
+    }
+
+    function displayMessage(message) {
+        document.write(message);
+    }
+
+    let age = parseFloat(prompt("Enter age :"));
+    check(age, displayMessage);
+</script>

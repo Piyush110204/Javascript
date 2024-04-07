@@ -1,0 +1,26 @@
+<script>
+    var num1 = parseFloat(prompt("Enter the first number: "));
+    var num2 = parseFloat(prompt("Enter the second number: "));
+    var ch = prompt("Enter the operator (+, -, *, /): ");
+
+    let result;
+
+    switch (ch) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+                result = num1 / num2;
+            break;
+        default:
+            result = "Invalid ";
+    }
+
+    document.write(`Result: ${result}`);
+</script>

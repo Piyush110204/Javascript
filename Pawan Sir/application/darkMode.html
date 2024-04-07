@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #icon {
+            cursor: pointer;
+        }
+
+        div {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body id="body" class="dark-mode">
+    <span onclick="change()" id="icon">&#9728;</span>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed commodi reprehenderit nobis natus rerum
+            distinctio. Hic, asperiores tenetur ipsa sapiente impedit alias magni nihil quo veritatis recusandae,
+            </p>
+    </div>
+
+
+    <script>
+        var dark = JSON.parse(localStorage.getItem("dark"));
+        var body = document.getElementById('body');
+        if (dark) {
+            body.classList.add('dark-mode');
+        }
+    
+        function change() {
+            dark = !dark;
+            body.classList.toggle('dark-mode');
+            localStorage.setItem("dark", JSON.stringify(dark));
+        }
+    </script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<script>
+    var f = parseInt(prompt("Enter first number: "));
+    var s = parseInt(prompt("Enter second number: "));
+    var t = parseInt(prompt("Enter third number: "));
+
+    var max;
+
+    if (f >= s && f >= t) {
+        max = f;
+    } else if (s >= f && s >= t) {
+        max = s;
+    } else {
+        max = t;
+    }
+
+    document.write("The greatest number is: " + max);
+</script>

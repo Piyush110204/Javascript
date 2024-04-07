@@ -1,0 +1,32 @@
+<script>
+    var obj1={
+        name:"p",
+        age:21,
+        email:"p@gmail.com"
+    };
+    var obj2={
+        name:"p",
+        age:21,
+        email:"p@gmail.com",
+    };
+    var flags2 = true;
+    document.write(Object.keys(obj1).length);
+    if(Object.keys(obj1).length==Object.keys(obj2).length){
+    }
+    else{
+        flags2=false;
+    }
+    var flag=true;
+    for(e in obj1){
+        if(obj1[e]!==obj2[e]){
+            flag=false;
+            break;
+        }
+    }
+    if(flag&&flags2){
+        document.write( `<br>Equal Element`)
+    }
+    else{
+        document.write( `<br>Not Equal Element`)
+    }
+</script>
